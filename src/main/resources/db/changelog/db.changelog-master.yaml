@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-invoices
+      author: carlos
+      changes:
+        - createTable:
+            tableName: invoices
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: state_code
+                  type: VARCHAR(255)
+              - column:
+                  name: tax_rate
+                  type: NUMERIC(10, 4)
+              - column:
+                  name: total
+                  type: NUMERIC(15, 2)
+
+  - changeSet:
+      id: 002-create-products
+      author: carlos
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: sku
+                  type: VARCHAR(100)
+              - column:
+                  name: description
+                  type: TEXT
+              - column:
+                  name: price
+                  type: NUMERIC(15, 2)
+              - column:
+                  name: tax
+                  type: NUMERIC(10, 4)
+              - column:
+                  name: total
+                  type: NUMERIC(15, 2)
