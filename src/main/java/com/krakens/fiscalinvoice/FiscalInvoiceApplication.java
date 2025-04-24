@@ -1,4 +1,4 @@
-package com.krakens.fiscal_invoice;
+package com.krakens.fiscalinvoice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
