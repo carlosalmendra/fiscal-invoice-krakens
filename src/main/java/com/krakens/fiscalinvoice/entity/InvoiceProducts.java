@@ -1,5 +1,6 @@
 package com.krakens.fiscalinvoice.entity;
 
+import com.krakens.fiscalinvoice.dto.InvoiceProductsDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,4 +25,13 @@ public class InvoiceProducts {
     private BigDecimal price;
     private double tax;
     private BigDecimal total;
+
+    public InvoiceProducts(InvoiceProductsDTO invoiceProductsDTO) {
+        this.id = invoiceProductsDTO.getId();
+        this.sku = invoiceProductsDTO.getSku();
+        this.description = invoiceProductsDTO.getDescription();
+        this.price = invoiceProductsDTO.getPrice();
+        this.tax = invoiceProductsDTO.getTax();
+        this.total = invoiceProductsDTO.getTotal();
+    }
 }
