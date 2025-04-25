@@ -27,7 +27,6 @@ public class InvoiceProducts {
     private BigDecimal total;
 
     public InvoiceProducts(InvoiceProductsDTO invoiceProductsDTO) {
-        this.id = invoiceProductsDTO.getId();
         this.sku = invoiceProductsDTO.getSku();
         this.description = invoiceProductsDTO.getDescription();
         this.price = invoiceProductsDTO.getPrice();

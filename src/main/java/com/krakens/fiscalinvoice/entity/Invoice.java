@@ -23,7 +23,6 @@ public class Invoice {
     private double total;
 
     public Invoice (InvoiceDTO invoiceDTO) {
-        this.id = invoiceDTO.getId();
         this.stateCode = invoiceDTO.getStateCode();
         this.taxRate = invoiceDTO.getTaxRate();
         this.total = invoiceDTO.getTotal();
